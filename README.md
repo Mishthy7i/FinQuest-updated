@@ -1,60 +1,48 @@
-# 💸 FinQuest  
+# 💸 FinQuest
 
-**FinQuest** is a **gamified personal finance tracker** that makes saving and budgeting fun, engaging, and habit-forming.  
-Developed to encourage Gen Z users to build better financial habits through **gamification** and **AI-powered insights**.  
-
----
-
-## 🚀 Problem / Need  
-- Financial literacy among youth is still low.  
-- Existing apps are either too educational (theory-heavy) or too tool-focused (just tracking).  
-- There is a need for a **balanced platform** that teaches financial concepts while enabling real-world money management.  
+**FinQuest** is a **gamified personal finance tracker** that makes managing money fun, engaging, and habit-forming. It combines **gamification mechanics** with **AI-powered insights** to help users save, budget, and achieve financial goals while building healthy financial habits. 🏦🎯
 
 ---
 
-## ✨ Features  
-- 📊 **Expense Tracking** – Categorize expenses (Food, Travel, Bills, etc.)  
-- 💸 **Savings Challenges** – e.g. “Save ₹500 this week”  
-- 🔥 **Daily Streaks & Habits** – Build consistency with rewards  
-- 🏆 **Achievements & Badges** – Unlock financial milestones  
-- 📈 **Leaderboards** – Friendly competition with peers  
-- 🎮 **XP & Levels** – Gamified progression system  
-- 🤖 **AI Budget Coach** – Smart financial insights and personalized tips  
+## 🚀 Features
+
+- 🎮 **Gamified Experience**: Turn budgeting and saving into a quest with streaks, rewards, and achievements.
+- 💰 **Expense & Income Tracking**: Record your daily expenses and income.
+- 🎯 **Goal Setting**: Set and track financial goals visually.
+- 🤖 **AI Insights**: Smart suggestions on spending, saving, and budgeting.
+- 📊 **Analytics Dashboard**: View trends and charts for your finances.
+- 🔥 **Streak Tracking**: Maintain daily streaks for saving or budgeting habits.
+- 📱 **Cross-Platform**: Works on web and mobile platforms.
 
 ---
 
-## 🛠️ Tech Stack  
+## 🛠 Tech Stack
 
-| Component       | Technology Used |
-|-----------------|-----------------|
-| **Frontend**    | Flutter (Mobile App) |
-| **Backend**     | FastAPI (Python) |
-| **Database**    | MySQL |
-| **Authentication** | JWT Tokens |
-| **AI Coach**    | OpenAI GPT-4 Model |
+| Layer         | Technology                |
+|---------------|--------------------------|
+| 💻 Frontend   | React.js, Tailwind CSS, Vite |
+| ⚡ Backend    | FastAPI                  |
+| 🗄 Database   | MySQL                    |
+| 🔐 Auth & Storage | Appwrite             |
+| 🤖 AI Model   | OpenAI GPT-4             |
+| 📱 Mobile     | Flutter        |
 
 ---
 
-## 📂 Project Structure  
+## 📸 Screenshots
 
+*(Add your app screenshots here)*
+![Dashboard](docs/screenshots/splash1.png)  
+![Dashboard](docs/screenshots/splash2.png)  
+![Dashboard](docs/screenshots/dashboard.png)  
+![Analytics](docs/Screenshots/analytics.png)  
+![Gamification](docs/Screenshots/gamification.png)  
+
+---
+
+## ⚡ Installation & Setup
+
+### Clone the repository
 ```bash
-FinQuest/
-│
-├── backend/          # FastAPI backend (Python)
-│   ├── main.py       # API entrypoint
-│   ├── routes/       # Expense, challenge, streak APIs
-│   ├── models/       # Pydantic models
-│   ├── db/           # SQL scripts & connection
-│   └── auth/         # JWT authentication
-│
-├── frontend/         # Flutter mobile app
-│   ├── lib/          
-│   │   ├── screens/  # UI Screens
-│   │   ├── widgets/  # Reusable widgets
-│   │   ├── services/ # API calls
-│   │   └── main.dart # App entrypoint
-│
-├── docs/             # Documentation & assets
-│   └── screenshots/  # App screenshots
-│
-└── README.md         # Project readme
+git clone https://github.com/your-username/FinQuest.git
+cd FinQuest
