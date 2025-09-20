@@ -45,7 +45,7 @@ class AnalyticsService {
     try {
       final goals = await fetchGoals();
       final currentGoal = goals.firstWhere((goal) => goal['id'] == goalId);
-      
+
       final fullGoalData = {
         'amount': currentGoal['amount'],
         'status': goalData['status'] ?? currentGoal['status'],
