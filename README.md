@@ -32,17 +32,20 @@
 ## 📸 Screenshots
 
 *(Add your app screenshots here)*
-![Dashboard](docs/screenshots/splash1.png)  
-![Dashboard](docs/screenshots/splash2.png)  
+![plash1](docs/screenshots/splash1.png)  
+![plash2](docs/screenshots/splash2.png)  
+![plash3](docs/screenshots/splash3.png)  
+![splash4](docs/screenshots/splash4.png)  
+![signup](docs/screenshots/signup.png)  
+![Setbudget](docs/screenshots/setbudget.png)
+![Sign-in](docs/screenshots/sign-in.png)    
 ![Dashboard](docs/screenshots/dashboard.png)  
-![Analytics](docs/Screenshots/analytics.png)  
-![Gamification](docs/Screenshots/gamification.png)  
+![Add_Transaction](docs/screenshots/addtransaction.png)  
+![Analytics](docs/screenshots/analytics.png)  
+![LeaderBoard](docs/screenshots/leaderboard.png)  
+![Ledger](docs/screenshots/ledger.png)  
+![ChatBot](docs/screenshots/chatbot.png)  
 
 ---
 
-## ⚡ Installation & Setup
 
-### Clone the repository
-```bash
-git clone https://github.com/your-username/FinQuest.git
-cd FinQuest
