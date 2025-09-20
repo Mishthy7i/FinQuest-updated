@@ -28,24 +28,25 @@
 | 📱 Mobile     | Flutter        |
 
 ---
-
 ## 📸 Screenshots
 
-*(Add your app screenshots here)*
-![plash1](docs/screenshots/splash1.png)  
-![plash2](docs/screenshots/splash2.png)  
-![plash3](docs/screenshots/splash3.png)  
-![splash4](docs/screenshots/splash4.png)  
-![signup](docs/screenshots/signup.png)  
-![Setbudget](docs/screenshots/setbudget.png)
-![Sign-in](docs/screenshots/sign-in.png)    
-![Dashboard](docs/screenshots/dashboard.png)  
-![Add_Transaction](docs/screenshots/addtransaction.png)  
-![Analytics](docs/screenshots/analytics.png)  
-![LeaderBoard](docs/screenshots/leaderboard.png)  
-![Ledger](docs/screenshots/ledger.png)  
-![ChatBot](docs/screenshots/chatbot.png)  
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
 
----
+<img src="docs/screenshots/splash1.png" alt="Splash 1" width="250"/>
+<img src="docs/screenshots/splash2.png" alt="Splash 2" width="250"/>
+<img src="docs/screenshots/splash3.png" alt="Splash 3" width="250"/>
+<img src="docs/screenshots/splash4.png" alt="Splash 4" width="250"/>
+<img src="docs/screenshots/signup.png" alt="Signup" width="250"/>
+<img src="docs/screenshots/setbudget.png" alt="Set Budget" width="250"/>
+<img src="docs/screenshots/sign-in.png" alt="Sign In" width="250"/>
+<img src="docs/screenshots/dashboard.png" alt="Dashboard" width="250"/>
+<img src="docs/screenshots/addtransaction.png" alt="Add Transaction" width="250"/>
+<img src="docs/screenshots/analytics.png" alt="Analytics" width="250"/>
+<img src="docs/screenshots/leaderboard.png" alt="Leaderboard" width="250"/>
+<img src="docs/screenshots/ledger.png" alt="Ledger" width="250"/>
+<img src="docs/screenshots/chatbot.png" alt="ChatBot" width="250"/>
+
+</div>
+
 
 
