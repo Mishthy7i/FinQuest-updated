@@ -100,7 +100,7 @@ class _SignUpPageState extends State<SignUpPage> {
       };
 
       final signUpResponse = await http.post(
-        Uri.parse('http://127.0.0.1:8000/auth/signup'),
+        Uri.parse('http://127.0.0.1:7001/auth/signup'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(userData),
       );
@@ -121,7 +121,7 @@ class _SignUpPageState extends State<SignUpPage> {
       };
 
       final loginResponse = await http.post(
-        Uri.parse('http://127.0.0.1:8000/auth/login'),
+        Uri.parse('http://127.0.0.1:7001/auth/login'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(loginData),
       );
@@ -724,7 +724,7 @@ class _ProfileSetupPageState extends State<ProfileSetupPage> {
 
       // Include JWT token in the headers
       final response = await http.post(
-        Uri.parse('http://127.0.0.1:8000/profile_build/create'),
+        Uri.parse('http://127.0.0.1:7001/profile_build/create'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ${widget.jwtToken}',

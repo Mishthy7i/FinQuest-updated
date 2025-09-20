@@ -60,7 +60,7 @@ class _ChatbotPageState extends State<ChatbotPage> {
 
       // Send message to chatbot API
       final response = await http.post(
-        Uri.parse('http://127.0.0.1:8000/chatbot/ask'),
+        Uri.parse('http://127.0.0.1:7001/chatbot/ask'),
         headers: {
           'Authorization': 'Bearer $token',
           'Content-Type': 'application/json',

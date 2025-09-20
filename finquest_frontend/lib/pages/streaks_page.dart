@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import '../services/streak_service.dart';
 
-class LeaderboardPage extends StatefulWidget {
-  const LeaderboardPage({Key? key}) : super(key: key);
+class StreaksPage extends StatefulWidget {
+  const StreaksPage({Key? key}) : super(key: key);
 
   @override
-  State<LeaderboardPage> createState() => _LeaderboardPageState();
+  State<StreaksPage> createState() => _StreaksPageState();
 }
 
-class _LeaderboardPageState extends State<LeaderboardPage>
+class _StreaksPageState extends State<StreaksPage>
     with TickerProviderStateMixin {
   final StreakService _streakService = StreakService();
   List<Map<String, dynamic>> _allStreaks = [];
@@ -323,91 +323,109 @@ class _LeaderboardPageState extends State<LeaderboardPage>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.blue.shade50, Colors.purple.shade50],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        ),
-      ),
-      child: Column(
-        children: [
-          // Header
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    '🏆 Streak Leaderboard',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                IconButton(
-                  onPressed: _loadStreakData,
-                  icon: const Icon(Icons.refresh),
-                ),
-              ],
-            ),
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.blue.shade50, Colors.purple.shade50],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
           ),
-
-          if (_isLoading)
-            const Expanded(child: Center(child: CircularProgressIndicator()))
-          else
-            Expanded(
-              child: RefreshIndicator(
-                onRefresh: _loadStreakData,
-                child: ListView(
+        ),
+        child: SafeArea(
+          child: Column(
+            children: [
+              // Header
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Row(
                   children: [
-                    // User's streak summary
-                    _buildUserStreakSummary(),
-
-                    // Leaderboard title
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 8,
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.leaderboard, color: Colors.grey.shade700),
-                          const SizedBox(width: 8),
-                          Text(
-                            'Global Rankings',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey.shade700,
-                            ),
-                          ),
-                        ],
+                    IconButton(
+                      onPressed: () => Navigator.pop(context),
+                      icon: const Icon(Icons.arrow_back),
+                    ),
+                    const Expanded(
+                      child: Text(
+                        'Streak Leaderboard',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-
-                    // Streaks list
-                    if (_allStreaks.isEmpty)
-                      const Center(
-                        child: Padding(
-                          padding: EdgeInsets.all(32),
-                          child: Text(
-                            'No streaks found',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ),
-                      )
-                    else
-                      ...List.generate(
-                        _allStreaks.length,
-                        (index) => _buildStreakCard(_allStreaks[index], index),
-                      ),
-
-                    const SizedBox(height: 20),
+                    IconButton(
+                      onPressed: _loadStreakData,
+                      icon: const Icon(Icons.refresh),
+                    ),
                   ],
                 ),
               ),
-            ),
-        ],
+
+              if (_isLoading)
+                const Expanded(
+                  child: Center(child: CircularProgressIndicator()),
+                )
+              else
+                Expanded(
+                  child: RefreshIndicator(
+                    onRefresh: _loadStreakData,
+                    child: ListView(
+                      children: [
+                        // User's streak summary
+                        _buildUserStreakSummary(),
+
+                        // Leaderboard title
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 8,
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.leaderboard,
+                                color: Colors.grey.shade700,
+                              ),
+                              const SizedBox(width: 8),
+                              Text(
+                                'Global Leaderboard',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey.shade700,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        // Streaks list
+                        if (_allStreaks.isEmpty)
+                          const Center(
+                            child: Padding(
+                              padding: EdgeInsets.all(32),
+                              child: Text(
+                                'No streaks found',
+                                style: TextStyle(fontSize: 16),
+                              ),
+                            ),
+                          )
+                        else
+                          ...List.generate(
+                            _allStreaks.length,
+                            (index) =>
+                                _buildStreakCard(_allStreaks[index], index),
+                          ),
+
+                        const SizedBox(height: 20),
+                      ],
+                    ),
+                  ),
+                ),
+            ],
+          ),
+        ),
       ),
     );
   }

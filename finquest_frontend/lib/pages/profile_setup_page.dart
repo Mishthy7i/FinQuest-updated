@@ -36,7 +36,7 @@ class _ProfileSetupPageState extends State<ProfileSetupPage> {
 
       // Add salary to the profile data
       final salaryResponse = await http.get(
-        Uri.parse('http://127.0.0.1:8000/profile/'),
+        Uri.parse('http://127.0.0.1:7001/profile/'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ${widget.jwtToken}',
@@ -54,7 +54,7 @@ class _ProfileSetupPageState extends State<ProfileSetupPage> {
       }
 
       final response = await http.post(
-        Uri.parse('http://127.0.0.1:8000/profile/build'),
+        Uri.parse('http://127.0.0.1:7001/profile/build'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ${widget.jwtToken}',

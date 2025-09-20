@@ -9,7 +9,7 @@ A simple backend using FastAPI and MySQL
 3. install fastapi
    pip install -r requirements.txt
 4. start fastapi
-   fastapi dev
+    uvicorn main:app --port 7001 --reload
 
 we used DECIMAL(10, 2) datatype to store salary.
 

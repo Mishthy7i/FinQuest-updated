@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class TransactionService {
-  static const String _baseUrl = 'http://127.0.0.1:8000';
+  static const String _baseUrl = 'http://127.0.0.1:7001';
 
   Future<List<Map<String, dynamic>>> fetchTransactions() async {
     final prefs = await SharedPreferences.getInstance();

@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
-  static const String _baseUrl = 'http://127.0.0.1:8000';
+  static const String _baseUrl = 'http://127.0.0.1:7001';
 
   Future<bool> login(String email, String password) async {
     final response = await http.post(
